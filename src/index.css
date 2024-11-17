@@ -88,4 +88,5 @@ button:focus-visible {
   flex: 1;
   margin: 10px;
   overflow-y: auto;
+  height: 85%;
 }
