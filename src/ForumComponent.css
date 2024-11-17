@@ -1,0 +1,9 @@
+.action-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.action-container .accordion {
+  flex-grow: 1;
+}

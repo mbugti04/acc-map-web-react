@@ -14,7 +14,8 @@ locations = [
         "marker_title": "Cro Blvd, Connecticut College",
         "marker_description": "Construction on Cro Blvd for Pedestrain Project. Recommended Route: Going through Resevoir Street or passing through Central Campus Houses (Plant, Brandford, Smith, and Burdick)",
         "vote_count": 32,
-        "image_path": "src/assets/croblvd.png"
+        "image_path": "src/assets/croblvd.png",
+        "comments": ["How long will the construction last?"],
     },
     {
         "id": 2,
@@ -23,7 +24,8 @@ locations = [
         "marker_title": "Corner of Tilly & Bank St.",
         "marker_description": "Pedestrian Signal with lack of WAIT Locator Tone",
         "vote_count": 18,
-        "image_path": "src/assets/pedestrian.jpg"
+        "image_path": "src/assets/pedestrian.jpg",
+        "comments": []
     },
     {
         "id": 3,
@@ -63,6 +65,7 @@ def add_location():
     new_location = request.get_json()
     new_location['id'] = locations[-1]['id'] + 1 if locations else 1
     new_location['vote_count'] = 0
+    new_location['comments'] = []
     locations.append(new_location)
     return jsonify(new_location), 201
 
