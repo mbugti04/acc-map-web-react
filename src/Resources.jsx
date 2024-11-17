@@ -18,32 +18,7 @@ function Resources() {
   }, []);
 
   return (
-    <>
-    <Navbar className="bg-body-tertiary" style={{ padding: '0.5rem 1rem', maxHeight: '60px' }}>
-        <Container>
-          <Navbar.Brand href="#resource">
-            <img
-              src="src/assets/ACCMapLogo.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
-            <Nav.Link href="#about">About Us</Nav.Link>
-            <Nav.Link href="#resources">Resources</Nav.Link>
-            AccMap
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-    <div className="container">
-      <div className="map" id="map">
-        <MapComponent locations={locations} />
-      </div>
-      <div className="forum" id="forum">
-        <ForumComponent locations={locations} />
-      </div>
-    </div>
-    </>
+    <h1>hi</h1>
   );
 }
 

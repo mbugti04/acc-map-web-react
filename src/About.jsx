@@ -9,40 +9,9 @@ import ForumComponent from './ForumComponent';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 
 function About() {
-  const [locations, setLocations] = useState([]);
-
-  useEffect(() => {
-    fetch('http://127.0.0.1:5001/locations').then(res => res.json()).then(data => {
-      setLocations(data);
-    });
-  }, []);
-
   return (
     <>
-    <Navbar className="bg-body-tertiary" style={{ padding: '0.5rem 1rem', maxHeight: '60px' }}>
-        <Container>
-          <Navbar.Brand href="#about">
-            <img
-              src="src/assets/ACCMapLogo.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
-            <Nav.Link href="#about">About Us</Nav.Link>
-            <Nav.Link href="#resources">Resources</Nav.Link>
-            AccMap
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-    <div className="container">
-      <div className="map" id="map">
-        <MapComponent locations={locations} />
-      </div>
-      <div className="forum" id="forum">
-        <ForumComponent locations={locations} />
-      </div>
-    </div>
+      <h1>Jangael</h1>
     </>
   );
 }

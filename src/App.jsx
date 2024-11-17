@@ -22,8 +22,8 @@ function App() {
 
   return (
     <Router>
-    <Navbar className="bg-body-tertiary" style={{ padding: '0.5rem 1rem', maxHeight: '60px' }}>
-        <Container>
+      <Navbar expand="lg" className="bg-body-tertiary" style={{ padding: '0.5rem 1rem', maxHeight: '60px' }}>
+        <Container fluid>
           <Navbar.Brand as={Link} to="/">
             <img
               src="src/assets/ACCMapLogo.png"
@@ -36,24 +36,27 @@ function App() {
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to ="/about">About Us</Nav.Link>
-            <Nav.Link as={Link} to ="/resources">Resources</Nav.Link>
+            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+            <Nav.Link as={Link} to="/resources">Resources</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-    <div className="container">
-      <Routes> 
-        {/* <Route path="/" element={<App />} /> */}
-        <Route path="/about" element={<About />} /> 
-        <Route path="/resources" element={<Resources />}/> 
-      </Routes>
-      <div className="map" id="map">
-        <MapComponent locations={locations} />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <div className="map" id="map">
+                <MapComponent locations={locations} />
+              </div>
+              <div className="forum" id="forum">
+                <ForumComponent locations={locations} />
+              </div>
+            </>
+          } />
+          <Route path="/about" element={<About />} />
+          <Route path="/resources" element={<Resources />} />
+        </Routes>
       </div>
-      <div className="forum" id="forum">
-        <ForumComponent locations={locations} />
-      </div>
-    </div>
     </Router>
   );
 }
