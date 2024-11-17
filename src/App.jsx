@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import MapComponent from './MapComponent';
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -15,19 +15,7 @@ function App() {
   }, []);
 
   return (
-    <MapContainer center={[41.37, -72.11]} zoom={12} scrollWheelZoom={true} style={{ height: '98vh', width: '98vw'}}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {locations.map(location => (
-        <Marker key={location.id} position={[location.latitude, location.longitude]}>
-          <Popup>
-            <strong>{location.marker_title}</strong><br />{location.marker_description}
-          </Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+    <MapComponent locations={locations} />
   );
 }
 
