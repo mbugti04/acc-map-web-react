@@ -15,7 +15,7 @@ locations = [
         "marker_description": "Construction on Cro Blvd for Pedestrain Project. Recommended Route: Going through Resevoir Street or passing through Central Campus Houses (Plant, Brandford, Smith, and Burdick)",
         "vote_count": 32,
         "image_path": "src/assets/croblvd.png",
-        "comments": ["How long will the construction last?", "I think the construction is a good idea."],
+        "comments": ["How long will the construction last?"],
     },
     {
         "id": 2,

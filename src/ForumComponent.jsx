@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import axios from 'axios';
 import { useState } from 'react';
+import './ForumComponent.css'; // Add this import for custom styles
 
 function ForumComponent({ locations }) {
   return (
@@ -37,22 +38,25 @@ function ForumPost({ location }) {
         <Card.Text>
           Votes: {voteCount}
         </Card.Text>
-        <Button variant="primary" onClick={() => handleVote(location.id, 'increment')}>+1</Button>
-        <Button variant="secondary" onClick={() => handleVote(location.id, 'decrement')}>-1</Button>
-        <Accordion>
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>Comments ({location.comments.length})</Accordion.Header>
-            <Accordion.Body>
-              {location.comments.length > 0 ? (
-                location.comments.map((comment, index) => (
-                  <p key={index}>{comment}</p>
-                ))
-              ) : (
-                <p>No comments yet.</p>
-              )}
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+        
+        <div className="action-container">
+          <Button variant="primary" onClick={() => handleVote(location.id, 'increment')}>+1</Button>
+          <Button variant="secondary" onClick={() => handleVote(location.id, 'decrement')}>-1</Button>
+          <Accordion style={{ width: '100%' }}>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Comments ({location.comments.length})</Accordion.Header>
+              <Accordion.Body>
+                {location.comments.length > 0 ? (
+                  location.comments.map((comment, index) => (
+                    <p key={index}>{comment}</p>
+                  ))
+                ) : (
+                  <p>No comments yet.</p>
+                )}
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>
       </Card.Body>
     </Card>
   );
