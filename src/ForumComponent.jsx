@@ -1,6 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import { useState } from 'react';
 
 function ForumComponent({ locations }) {
   return (
@@ -13,10 +14,12 @@ function ForumComponent({ locations }) {
 }
 
 function ForumPost({ location }) {
+  const [voteCount, setVoteCount] = useState(location.vote_count);
+
   const handleVote = async (id, action) => {
     try {
-      await axios.post(`/locations/${id}/vote`, { action });
-      // Optionally, you can update the UI or state here after the vote
+      await axios.post(`http://129.133.74.40:5001/locations/${id}/vote`, { action });
+      setVoteCount(prevCount => action === 'increment' ? prevCount + 1 : prevCount - 1);
     } catch (error) {
       console.error("Error voting:", error);
     }
@@ -31,7 +34,7 @@ function ForumPost({ location }) {
           {location.marker_description}
         </Card.Text>
         <Card.Text>
-          Votes: {location.vote_count}
+          Votes: {voteCount}
         </Card.Text>
         <Button variant="primary" onClick={() => handleVote(location.id, 'increment')}>+1</Button>
         <Button variant="secondary" onClick={() => handleVote(location.id, 'decrement')}>-1</Button>
