@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import MapComponent from './MapComponent';
+import ForumComponent from './ForumComponent';
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -15,7 +16,14 @@ function App() {
   }, []);
 
   return (
-    <MapComponent locations={locations} />
+    <div className="container">
+      <div className="map">
+        <MapComponent locations={locations} />
+      </div>
+      <div className="forum">
+        <ForumComponent locations={locations} />
+      </div>
+    </div>
   );
 }
 
