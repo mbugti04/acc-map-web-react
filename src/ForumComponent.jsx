@@ -31,9 +31,9 @@ function ForumPost({ location }) {
     <Card>
       <Card.Img variant="top" src={location.image_path || "holder.js/100px180"} />
       <Card.Body>
-        <Card.Title>{location.marker_title}</Card.Title>
+        <Card.Title>{location.marker_title || "No Title"}</Card.Title>
         <Card.Text>
-          {location.marker_description}
+          {location.marker_description || "No Description"}
         </Card.Text>
         <Card.Text>
           Votes: {voteCount}
@@ -44,9 +44,9 @@ function ForumPost({ location }) {
           <Button variant="secondary" onClick={() => handleVote(location.id, 'decrement')}>-1</Button>
           <Accordion style={{ width: '100%' }}>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Comments ({location.comments.length})</Accordion.Header>
+              <Accordion.Header>Comments ({location.comments ? location.comments.length : 0})</Accordion.Header>
               <Accordion.Body>
-                {location.comments.length > 0 ? (
+                {location.comments && location.comments.length > 0 ? (
                   location.comments.map((comment, index) => (
                     <p key={index}>{comment}</p>
                   ))
