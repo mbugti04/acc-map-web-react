@@ -83,3 +83,9 @@ button:focus-visible {
   flex: 1;
   margin: 10px;
 }
+
+.forum {
+  flex: 1;
+  margin: 10px;
+  overflow-y: auto;
+}
