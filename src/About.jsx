@@ -47,4 +47,4 @@ function About() {
   );
 }
 
-export default App
+export default About

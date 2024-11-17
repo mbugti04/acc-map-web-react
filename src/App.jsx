@@ -43,7 +43,7 @@ function App() {
       </Navbar>
     <div className="container">
       <Routes> 
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<App />} /> */}
         <Route path="/about" element={<About />} /> 
         <Route path="/resources" element={<Resources />}/> 
       </Routes>

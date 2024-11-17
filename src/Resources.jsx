@@ -47,4 +47,4 @@ function Resources() {
   );
 }
 
-export default App
+export default Resources
