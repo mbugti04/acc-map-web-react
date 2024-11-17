@@ -11,25 +11,25 @@ locations = [
         "id": 1,
         "latitude": 41.37937613418269,
         "longitude": -72.10613281840935,
-        "marker_title": "Location 1",
-        "marker_description": "Description for location 1",
-        "vote_count": 0,
-        "image_path": ""
+        "marker_title": "Cro Blvd, Connecticut College",
+        "marker_description": "Construction on Cro Blvd for Pedestrain Project. Recommended Route: Going through Resevoir Street or passing through Central Campus Houses (Plant, Brandford, Smith, and Burdick)",
+        "vote_count": 32,
+        "image_path": "src/assets/croblvd.png"
     },
     {
         "id": 2,
-        "latitude": 41.38,
-        "longitude": -72.2,
-        "marker_title": "Location 2",
-        "marker_description": "Description for location 2",
-        "vote_count": 0,
-        "image_path": ""
+        "latitude": 41.351505585433806, 
+        "longitude": -72.09735330096298,
+        "marker_title": "Corner of Tilly & Bank St.",
+        "marker_description": "Pedestrian Signal with lack of WAIT Locator Tone",
+        "vote_count": 18,
+        "image_path": "src/assets/pedestrian.jpg"
     },
     {
         "id": 3,
         "latitude": 41.382631314999664,
         "longitude": -72.10870974508146,
-        "marker_title": "No Sidewalk",
+        "marker_title": "No Sidewalk by Johnson House",
         "marker_description": "There is no sidewalk to get to Johnson House. Recommended route: through the inside of the Plex building.",
         "vote_count": 0,
         "image_path": 'src/assets/johnson.png'
