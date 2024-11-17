@@ -24,7 +24,7 @@ function ForumPost({ location }) {
 
   return (
     <Card>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={location.image_path || "holder.js/100px180"} />
       <Card.Body>
         <Card.Title>{location.marker_title}</Card.Title>
         <Card.Text>

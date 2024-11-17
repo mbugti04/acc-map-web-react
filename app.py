@@ -13,7 +13,8 @@ locations = [
         "longitude": -72.10613281840935,
         "marker_title": "Location 1",
         "marker_description": "Description for location 1",
-        "vote_count": 0
+        "vote_count": 0,
+        "image_path": ""
     },
     {
         "id": 2,
@@ -21,15 +22,17 @@ locations = [
         "longitude": -72.2,
         "marker_title": "Location 2",
         "marker_description": "Description for location 2",
-        "vote_count": 0
+        "vote_count": 0,
+        "image_path": ""
     },
     {
         "id": 3,
-        "latitude": 41.39,
-        "longitude": -72.3,
-        "marker_title": "Location 3",
-        "marker_description": "Description for location 3",
-        "vote_count": 0
+        "latitude": 41.382631314999664,
+        "longitude": -72.10870974508146,
+        "marker_title": "No Sidewalk",
+        "marker_description": "There is no sidewalk to get to Johnson House. Recommended route: through the inside of the Plex building.",
+        "vote_count": 0,
+        "image_path": 'src/assets/johnson.png'
     }
 ]
 
