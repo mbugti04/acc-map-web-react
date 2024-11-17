@@ -10,9 +10,29 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 
 function About() {
   return (
-    <>
-      <h1>Jangael</h1>
-    </>
+    <div style={{ padding: '20px', width: '70%', margin: '0 auto', textAlign: 'center' }}>
+      <div>
+        <h1>The Developer Team</h1>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
+        <div>
+          <h2>Mustafa Bugti</h2>
+          <img src="src/assets/mustafa.png" alt="Mustafa Bugti" width="400" height="400" style={{ objectFit: 'cover' }} />
+        </div>
+        <div>
+          <h2>Jangael Rosales</h2>
+          <img src="src/assets/jangael.jpg" alt="Jangael Rosales" width="400" height="400" style={{ objectFit: 'cover' }} />
+        </div>
+        <div>
+          <h2>Jun Yi He Wu</h2>
+          <img src="src/assets/jun.jpg" alt="Jun Yi He Wu" width="400" height="400" style={{ objectFit: 'cover' }} />
+        </div>
+        <div>
+          <h2>Ricardo Flores</h2>
+          <img src="src/assets/ricardo.png" alt="Ricardo Flores" width="400" height="400" style={{ objectFit: 'cover' }} />
+        </div>
+      </div>
+    </div>
   );
 }
 
