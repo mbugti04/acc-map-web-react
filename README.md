@@ -1,6 +1,6 @@
 # AccMap
 
-https://devpost.com/software/accmap
+https://devpost.com/software/accmap | AccMap is a First Place Winner for Wesleyan University's Annual Hackathon, WesHack 2024! 
 
 ## Inspiration
 
